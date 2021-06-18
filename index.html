@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .container{
+            
+            background-clip: border-box;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column ;
+            
+        }
+        .flex_2{
+            
+            height: fit-content;
+            display: flex;
+            justify-content: space-around;
+            transition: all ease-in-out .5s;
+        }
+        .flex_1{
+            flex-direction: column;
+            align-items: center;
+            height: fit-content;
+            display:none;
+            justify-content: space-around;
+            transition: all ease-in-out .5s;
+            
+        }
+        .divider{
+            padding: 1px;
+        }
+        #time{
+            font-size: 200px;
+            color: white;
+        }
+         .secwrapper, .minwrapper, .hrwrapper{
+             width: 250px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         }
+        #date, #greet{
+            font-size: 40px;
+            color: white;
+        }   
+        #searchbar{
+            width: 500px;
+            height: 50px;
+            padding: 20px;
+            border-radius: 50px;
+            font-size: 15px;
+           
+        }
+        #searchbar:focus{
+            outline: none;
+        }
+        form{
+            padding: 5%;
+        }
+        .timetoggler{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            border: 0;
+            border-radius: 5px;
+            transition:all ease-in-out .3s;
+        }
+        .bartoggler{
+            position: fixed;
+            top: 60px;
+            right: 10px;
+            padding: 10px;
+            border: 0;
+            border-radius: 5px;
+            transition:all ease-in-out .3s;
+        }
+        .timetoggler:hover, .bartoggler:hover{
+            opacity: .4;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="timetoggler" id="timetoggler">Toggle Time</button>
+        <button class="bartoggler" id="bartoggler">Toggle Bar</button>
+        <p id="greet" >Hii Dilip</p>
+        <form>
+            <input id="searchbar"  placeholder="Search on Google"/> 
+        </form>
+        <div class="flex_1">
+        <div class="flex_2">
+            <div class="hrwrapper"><p id="time" class="hour"></p></div>
+            <div id="time" class="divider"><p>:</p></div>
+            <div class="minwrapper"><p  id="time" class="min"></p></div>
+            .<div id="time" class="divider"><p>:</p></div>
+            <div class="secwrapper"><p id="time" class="sec"></p></div>
+             
+        </div>
+          <div class="date">
+              <p id="date" ></p>
+          </div>
+        </div>
+</div>  
+
+    <script src="main.js"></script>
+</body>
+</html>
